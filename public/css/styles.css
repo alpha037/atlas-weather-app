@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+:root {
+  --primary-color: rgba(13, 110, 139, 0.45);
+  --overlay-color: rgba(24, 39, 51, 0.85);
+  --menu-speed: 0.75s;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #1e6262;
+  background-color: #ecfffb;
+  font-family: 'Roboto', sans-serif;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 0 28px;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex-grow: 1;
+}
+
+.main-content .about {
+  margin: -1.25rem 0 2rem 0;
+  font-weight: bold;
+}
+
+.main-content .author {
+  margin: 1rem 0 2rem 0;
+  font-weight: bold;
+}
+
+footer {
+  color: #888888;
+  border-top: 1px solid #eeeeee;
+  margin-top: 25px;
+  padding: 16px 0;
+  transition: border-top 0.3s ease-in-out;
+}
+
+footer:hover {
+  border-top: 1px solid #2d767f;
+}
+
+header {
+  margin-top: 16px;
+  margin-bottom: 48px;
+}
+
+h1 {
+  font-size: 64px;
+  font-weight: bolder;
+  margin-bottom: 15px;
+}
+
+h4 {
+  margin-bottom: 15px;
+}
+
+/*
+  EXT
+*/
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+  margin-left: -15px;
+}
+
+.searchTerm {
+  background-color: #ecfffb;
+  color: #40514e;
+  font-weight: bold;
+  width: 100%;
+  border: 2px solid #2d767f;
+  border-right: none;
+  padding: 2px 5px 2px;
+  padding-left: 30px;
+  height: 2.25rem;
+  border-radius: 5px 0 0 5px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.search .searchIcon {
+  position: relative;
+  left: 25px;
+  top: 10px;
+}
+
+.searchTerm:focus {
+  background-color: #ecfffb;
+  outline: none;
+  color: #40514e;
+}
+
+::-webkit-input-placeholder {
+  font-style: italic;
+}
+
+:-moz-placeholder {
+  font-style: italic;
+}
+
+::-moz-placeholder {
+  font-style: italic;
+}
+
+:-ms-input-placeholder {
+  font-style: italic;
+}
+
+.searchButton {
+  width: 4rem;
+  height: 36px;
+  border: 1px solid #2d767f;
+  background: #2d767f;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 16px;
+  outline: none;
+  padding: 4px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.searchButton:hover {
+  background-color: #10316b;
+}
+
+/*==============*/
+
+.fetch-data {
+  margin-top: 30px;
+  font-size: 1.25rem;
+}
+
+.fetch-data #locationText,
+.fetch-data #forecastText,
+.fetch-data #localtime,
+.fetch-data #date {
+  color: #40514e;
+}
+
+.fetch-data #img {
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.hideImage {
+  visibility: hidden;
+}
+
+.showImage {
+  visibility: visible;
+}
+
+.image {
+  width: 300px;
+  height: 280px;
+  opacity: 0.94;
+  border-radius: 50%;
+  transition: all 0.3s ease-in;
+  pointer-events: none;
+}
+
+.image:hover {
+  opacity: 1;
+}
+
+.github-profile {
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.github-profile:hover {
+  color: #333333
+}
+
+@media screen and (max-width: 1024px) {
+
+  header {
+    margin-top: 40px;
+  }
+
+  .image {
+    width: 250px;
+    height: 240px;
+  }
+
+  .searchTerm {
+    font-size: 0.9rem;
+  }
+
+  .fetch-data {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+}

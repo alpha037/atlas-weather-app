@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A minimalist asynchronous weather application.">
+    <meta name="keywords" content="HTML,CSS,JavaScript,JS,Nodejs,nodejs,node.js,Express,">
+    <meta name="author" content="Shubhranil Dutta">
+
+    <link rel="icon" href="img/weather01.png">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/menu.css">
+
+    <title>{{title}}</title>
+</head>
+
+<body>
+
+    {{>menu}}
+
+    <div class="main-content">
+        {{>header}}
+
+        <h3 class="about">
+            This website uses data from Mapbox API and WeatherStack API.
+        </h3>
+
+        <h3 class="author">
+            Created by Shubhranil Dutta.
+        </h3>
+
+        <img src="img/me.png" class="image" alt="me">
+    </div>
+
+    {{>footer}}
+</body>
+</body>
+
+</html>

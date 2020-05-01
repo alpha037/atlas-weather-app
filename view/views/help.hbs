@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A minimalist asynchronous weather application.">
+    <meta name="keywords" content="HTML,CSS,JavaScript,JS,Nodejs,nodejs,node.js,Express,">
+    <meta name="author" content="Shubhranil Dutta">
+
+    <link rel="icon" href="img/weather01.png">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/menu.css">
+
+    <title>{{title}}</title>
+</head>
+
+<body>
+
+    {{>menu}}
+
+    <div class="main-content">
+        {{>header}}
+        <h3>
+            -> {{content}}
+        </h3>
+        <br>
+        <p>
+            <h3>
+                -> {{instructions}}
+            </h3>
+        </p>
+    </div>
+
+    {{>footer}}
+
+</body>
+</body>
+
+</html>
