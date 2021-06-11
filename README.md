@@ -2,7 +2,7 @@
 
 <p> A minimalist asynchronous weather application. </p>
 
-#### Deployed at: http://alpha-weatherapp.herokuapp.com/
+#### Deployed at: http://weather.shubhranil.com/
 
 #### Help:
 
