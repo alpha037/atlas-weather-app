@@ -16,6 +16,7 @@
     "request": "^2.88.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.3"
+    "nodemon": "^2.0.3",
+    "glob-parent": ">=5.1.2"
   }
 }
