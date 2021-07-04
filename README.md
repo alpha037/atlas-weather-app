@@ -2,7 +2,7 @@
 
 <p> A minimalist asynchronous weather application. </p>
 
-#### Deployed at: http://alpha-weatherapp.herokuapp.com/
+#### Deployed at: http://weather.shubhranil.com/
 
 #### Help:
 
@@ -21,6 +21,16 @@
 If you haven't installed [Docker](https://www.docker.com/products/docker-desktop) already, then you can get it from [here](https://www.docker.com/products/docker-desktop). After installing it, create an account in Docker and copy the username.
 
 Before running this application in docker, make sure to replace the **API KEYS** placeholder with your own.
+
+This application is already dockerized. You can pull the image directly from [docker hub](https://hub.docker.com/u/alpha037):
+
+```bash
+docker pull alpha037/async-weather-app
+```
+
+**OR**
+
+You can create your own by following the given steps.
 
 To run the app as a docker container, follow the given steps:
 
