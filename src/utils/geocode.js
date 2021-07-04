@@ -1,15 +1,15 @@
-const request = require('request');
+const request = require("request");
 
 const geocode = (location, callback) => {
   const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(
     location
-  )}.json?access_token={YOUR_API_KEY}`;
+  )}.json?access_token=${process.env.MAPBOX_ACCESS_TOKEN}`;
 
   request({ url, json: true }, (error, { body }) => {
-    if (error) callback('Unable to connect to location services.', undefined);
+    if (error) callback("Unable to connect to location services.", undefined);
     else if (body.features.length === 0)
       callback(
-        'Unable to find the specified location. Please try again.',
+        "Unable to find the specified location. Please try again.",
         undefined
       );
     else {

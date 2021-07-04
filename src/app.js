@@ -1,29 +1,33 @@
-const path = require('path');
+const path = require("path");
 
-const express = require('express');
-const hbs = require('hbs');
+const express = require("express");
+const hbs = require("hbs");
 
-const geocode = require('./utils/geocode');
-const forecast = require('./utils/forecast');
+// Before doing this, check the .env.example file
+const ENV_PATH = path.join(__dirname, "../config/.env");
+require("dotenv").config({ path: ENV_PATH });
+
+const geocode = require("./utils/geocode");
+const forecast = require("./utils/forecast");
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT;
 
-const publicDirectoryPath = path.join(__dirname, '../public');
-const viewsPath = path.join(__dirname, '../view/views');
-const partialsPath = path.join(__dirname, '../view/partials');
+const publicDirectoryPath = path.join(__dirname, "../public");
+const viewsPath = path.join(__dirname, "../view/views");
+const partialsPath = path.join(__dirname, "../view/partials");
 
 app.use(express.static(publicDirectoryPath));
 
-app.set('view engine', 'hbs');
-app.set('views', viewsPath);
+app.set("view engine", "hbs");
+app.set("views", viewsPath);
 hbs.registerPartials(partialsPath);
 
 // Routing to app.com/weather
-app.get('/weather', (req, res) => {
+app.get("/weather", (req, res) => {
   if (!req.query.address) {
     return res.send({
-      error: 'You have to provide a valid address.',
+      error: "You have to provide a valid address.",
     });
   }
 
@@ -75,44 +79,44 @@ app.get('/weather', (req, res) => {
 });
 
 // Root route -> app.com
-app.get('', (req, res) => {
-  res.render('index', {
-    title: 'Weather Forecast',
-    about: 'A minimalist asynchronous weather application.',
-    data: 'Alpha Inc.',
+app.get("", (req, res) => {
+  res.render("index", {
+    title: "Weather Forecast",
+    about: "A minimalist asynchronous weather application.",
+    data: "Alpha Inc.",
   });
 });
 
 // Routing to app.com/about
-app.get('/about', (req, res) => {
-  res.render('about', {
-    title: 'About',
+app.get("/about", (req, res) => {
+  res.render("about", {
+    title: "About",
   });
 });
 
 // Routing to app.com/help
-app.get('/help', (req, res) => {
-  res.render('help', {
-    title: 'Help',
+app.get("/help", (req, res) => {
+  res.render("help", {
+    title: "Help",
     content:
-      'Use this web app to find out the weather of any place in real time.',
+      "Use this web app to find out the weather of any place in real time.",
     instructions:
-      'Just type in the name of the place in the search bar and see the magic happen.',
+      "Just type in the name of the place in the search bar and see the magic happen.",
   });
 });
 
 // Matching any route which comes under app.com/help/....
-app.get('/help/*', (req, res) => {
-  res.render('404', {
-    title: '404: Page Not Found - Help',
+app.get("/help/*", (req, res) => {
+  res.render("404", {
+    title: "404: Page Not Found - Help",
     content: "The help article you're looking for cannot be found",
   });
 });
 
 // Matching any route except the above mentioned routes
-app.get('*', (req, res) => {
-  res.render('404', {
-    title: '404 - Page Not Found',
+app.get("*", (req, res) => {
+  res.render("404", {
+    title: "404 - Page Not Found",
     content: "The page you're looking cannot be found",
   });
 });

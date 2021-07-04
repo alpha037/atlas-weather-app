@@ -1,16 +1,18 @@
-const request = require('request');
+const request = require("request");
 
 const forecast = (latitude, longitude, callback) => {
-  const url = `http://api.weatherstack.com/current?access_key={YOUR_API_KEY}&query=${encodeURIComponent(
-    latitude
-  )},${encodeURIComponent(longitude)}&units=m`;
+  const url = `http://api.weatherstack.com/current?access_key=${
+    process.env.WEATHERSTACK_ACCESS_KEY
+  }&query=${encodeURIComponent(latitude)},${encodeURIComponent(
+    longitude
+  )}&units=m`;
 
   request({ url, json: true }, (error, { statusCode, body }) => {
     if (error || !statusCode || !body)
-      callback('Unable to connect to weather forecast services.', undefined);
+      callback("Unable to connect to weather forecast services.", undefined);
     else if (statusCode !== 200)
       callback(
-        'Unable to find the specified location. Please try again after some time.',
+        "Unable to find the specified location. Please try again after some time.",
         undefined
       );
     else {

@@ -3,3 +3,4 @@ SSH-key.txt
 autocomplete.js
 main-decrypted.js
 profile-redirect-decrypted.js
+config/.env
