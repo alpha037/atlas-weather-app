@@ -1,4 +1,8 @@
-# Weather Forecast Web Application.
+<a href="https://atlas.shubhranil.com" target="\_blank">
+<img src="https://img.shields.io/badge/Developed%20and%20Maintained%20by-Atlas%20Inc-blue">
+</a>
+
+# Atlas Weather-App
 
 <p> A minimalist asynchronous weather application. </p>
 
