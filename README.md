@@ -29,7 +29,7 @@ Before running this application in docker, make sure to replace the **API KEYS**
 This application is already dockerized. You can pull the image directly from [docker hub](https://hub.docker.com/u/alpha037):
 
 ```bash
-docker pull alpha037/async-weather-app
+docker pull alpha037/atlas-weather-app
 ```
 
 **OR**
@@ -40,15 +40,15 @@ To run the app as a docker container, follow the given steps:
 
 - Navigate to the project directory
   ```bash
-  cd Asynchronous-Weather-App
+  cd atlas-weather-app
   ```
 - Replace <strong>USERNAME</strong> with your own username and build the docker image
   ```bash
-  docker build -t <USERNAME>Asynchronous-Weather-App:1.0 .
+  docker build -t <USERNAME>/atlas-weather-app:1.0 .
   ```
 - Open up the terminal at the project directory, replace <strong>USERNAME</strong> with your own username and run the following command:
   ```bash
-  docker run -p 3000:3000 <USERNAME>/Asynchronous-Weather-App:1.0
+  docker run -p 3000:3000 <USERNAME>/atlas-weather-app:1.0
   ```
 - You can also use <strong>docker compose</strong> to manage your containers:
   ```bash
