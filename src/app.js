@@ -24,8 +24,8 @@ app.set("views", viewsPath);
 hbs.registerPartials(partialsPath);
 
 app.get("/.well-known/acme-challenge/:content", (req, res) => {
-  res.setHeader("content-type", "text/plain");
-  res.send(process.env.SSL_KEY);
+  res.set("content-type", "text/plain");
+  res.send(process.env.SSL_KEY.toString());
 });
 
 // Routing to app.com/weather
