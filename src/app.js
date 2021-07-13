@@ -105,6 +105,10 @@ app.get("/help", (req, res) => {
   });
 });
 
+app.get("/.well-known/acme-challenge/:content", (req, res) => {
+  res.send(process.env.SSL_KEY);
+});
+
 // Matching any route which comes under app.com/help/....
 app.get("/help/*", (req, res) => {
   res.render("404", {
