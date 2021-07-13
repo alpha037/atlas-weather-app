@@ -23,6 +23,10 @@ app.set("view engine", "hbs");
 app.set("views", viewsPath);
 hbs.registerPartials(partialsPath);
 
+app.get("/.well-known/acme-challenge/:content", (req, res) => {
+  res.send(process.env.SSL_KEY);
+});
+
 // Routing to app.com/weather
 app.get("/weather", (req, res) => {
   if (!req.query.address) {
@@ -103,10 +107,6 @@ app.get("/help", (req, res) => {
     instructions:
       "Just type in the name of the place in the search bar and see the magic happen.",
   });
-});
-
-app.get("/.well-known/acme-challenge/:content", (req, res) => {
-  res.send(process.env.SSL_KEY);
 });
 
 // Matching any route which comes under app.com/help/....
