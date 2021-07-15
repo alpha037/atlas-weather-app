@@ -23,10 +23,13 @@ app.set("view engine", "hbs");
 app.set("views", viewsPath);
 hbs.registerPartials(partialsPath);
 
-app.get("/.well-known/acme-challenge/:content", (req, res) => {
-  res.set("content-type", "text/plain");
-  res.send(JSON.stringify(process.env.SSL_KEY));
-});
+app.get(
+  `/.well-known/acme-challenge/${process.env.SSL_ENDPOINT}`,
+  (req, res) => {
+    res.set("content-type", "text/plain");
+    res.send(JSON.stringify(process.env.SSL_KEY));
+  }
+);
 
 // Routing to app.com/weather
 app.get("/weather", (req, res) => {
