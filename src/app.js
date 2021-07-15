@@ -27,7 +27,7 @@ app.get(
   `/.well-known/acme-challenge/${process.env.SSL_ENDPOINT}`,
   (req, res) => {
     res.set("content-type", "text/plain");
-    res.send(JSON.stringify(process.env.SSL_KEY));
+    res.send(process.env.SSL_KEY);
   }
 );
 
