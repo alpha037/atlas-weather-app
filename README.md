@@ -12,7 +12,7 @@
 
 <p> You can use this web app to find out the weather of any place in real time. Just type in the name of the place in the search bar and see the magic happen. </p>
 
-### Features include:
+# Features include:
 
 <ul>
   <li> Complete location of the searched place. </li>
@@ -20,7 +20,7 @@
   <li> Autocomplete feature powered by Google Places API (sometimes it won't work due to API traffic or daily API calls limit or a number of   other reasons) and Weather based real-time icons (if available). </li>
 </ul>
 
-### Docker Instructions
+# Docker Instructions
 
 If you haven't installed [Docker](https://www.docker.com/products/docker-desktop) already, then you can get it from [here](https://www.docker.com/products/docker-desktop). After installing it, create an account in Docker and copy the username.
 
@@ -58,3 +58,23 @@ To run the app as a docker container, follow the given steps:
   ```bash
   docker-compose down
   ```
+
+# Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**. For more details, check out the [contributing guidelines](CONTRIBUTING.md).
+
+1. Fork the Project.
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`).
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`).
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request.
+
+# License
+
+Distributed under GNU AGPL 3.0. See [LICENSE](LICENSE) for more information.
+
+# Contact
+
+Shubhranil Dutta - contact@shubhranil.com
+
+Project Link: [https://github.com/alpha037/atlas-weather-app](https://github.com/alpha037/atlas-weather-app)
